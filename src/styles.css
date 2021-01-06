@@ -193,6 +193,7 @@ a.social:hover {
   .deck {
       display: -ms-flexbox;      /* TWEENER - IE 10 */
       display: flex; 
+      flex-wrap: wrap;
       max-width: 1200px;
       -ms-flex-pack: distribute;
       justify-content: space-around;
