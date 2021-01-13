@@ -4,6 +4,41 @@ body {
   margin: 0;
 }
 
+header {
+  min-height: 30px;
+  padding: 10px;
+}
+
+header nav ul {
+  display: flex;
+  /*justify-content: space-around;*/
+  list-style-type: none;
+  font-weight: 700;
+  margin: 0 auto;
+  padding: 0;
+}
+
+header nav ul li {
+  padding: 5px 10px 10px 10px;
+}
+
+header a {
+  text-decoration: none;
+  color: rgb(100, 150, 200);
+  transition: all 0.5s;
+}
+
+header a:hover {
+  color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 720px) {
+  header nav {
+    max-width: 1200px;
+    padding: 0 30px;
+  }
+}
+
 .cat, .poptart, .head, .feet, .tail, .rainbow, .sprite, .stars li, .stars li i {
   position: absolute;
   background-repeat: no-repeat;
