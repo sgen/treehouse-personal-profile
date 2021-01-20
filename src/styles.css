@@ -1,113 +1,133 @@
-/* Global Layout Set-up */
-* { 
-  box-sizing: border-box;
-}
-  
+/* reset default padding */
+html,
 body {
   margin: 0;
   padding: 0;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  color: #222;
-  background: #f7f5f0;
 }
-/* Link Styles */
 
+/* border box everything */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* global styles */
+body {
+  background: rgb(235, 235, 235);
+  color: rgb(35, 35, 35);
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+/* link styles */
 a {
+  color: rgb(153, 153, 153);
   text-decoration: none;
-  color: #999;
 }
+
 a:hover {
-  color: #6633ff;
+  color: rgb(102, 51, 255);
 }
 
-/* Section Styles */
+/* section styles */
 
-.main-nav {
-  width: 100%;
-  background: black;
-  min-height: 30px;
-  padding: 10px;
+/* #nav-bar styles */
+#nav-bar {
   position: fixed;
+  width: 100%;
+  padding: 10px;
+  background: rgb(35, 35, 35);
   text-align: center;
 }
-.nav {
+
+/* #nav styles */
+#nav ul {
   display: flex;
   justify-content: space-around;
-  font-weight: 700;
-  list-style-type: none;
   margin: 0 auto;
   padding: 0;
+  font-weight: 700;
+  list-style-type: none;
 }
 
-.nav .name {
+#nav .name {
   display: block;
   margin-right: auto;
-  color: white;
+  color: rgb(235, 235, 235);
 }
 
-.nav li {
-  padding: 5px 10px 10px 10px;
-}
-.nav a {
-  transition: all .5s;
-}
-.nav a:hover {
-  color: white
+#nav li {
+  padding: 5px;
 }
 
-main header {
-  text-align: center;
+#nav a {
+  transition: all 0.5s;
+}
+
+#nav a:hover {
+  color: rgb(235, 235, 235);
+}
+
+/* #hero styles */
+#hero {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 59px 10px 10px;
   background: url('images/toronto.jpg') no-repeat top center;
   background-size: cover;
+  text-align: center;
   overflow: hidden;
-  padding-top: 60px;
 }
-header {
-  line-height: 1.5;
-}
-main header .profile-image {
-  margin-top: 50px;
+
+#hero .profile-image {
   width: 150px;
   height: 150px;
-  border-radius: 50%;
-  border: 3px solid white;
+  margin: 20px;
   transition: all 1s;
+  border: 3px solid rgb(235, 235, 235);
+  border-radius: 50%;
 }
-main header .profile-image:hover {
+
+#hero .profile-image:hover {
   transform: scale(1.2) rotate(720deg);
 }
 
-main header .name {
+#hero .name {
   border-radius: 15px;
   background-color: rgba(34, 34, 34, 0.75);
   color: rgb(245, 245, 245);
 }
 
-main header .location {
+#hero .location {
   border-radius: 15px;
   background-color: rgba(34, 34, 34, 0.75);
   color: rgb(245, 245, 245);
 }
 
+/* .tag styles */
 .tag {
-  background-color: #efefef;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
   display: table;
   margin: 10px auto;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgb(239, 239, 239);
+  color: rgb(35, 35, 35);
 }
 
+/* .card styles */
 .card {
-  margin: 30px;
-  padding: 20px 40px 40px;
-  max-width: 500px;
+  padding: 15px;
+  transition: all 0.5s;
+  border-bottom: 2px solid rgb(204, 204, 204);
+  background: rgb(235, 235, 235);
   text-align: left;
-  background: #fff;
-  border-bottom: 4px solid #ccc;
-  border-radius: 6px;
-  transition: all .5s;
 }
 
 .card:hover {
@@ -115,118 +135,108 @@ main header .location {
 }
 
 .card img {
-  max-width: 260px;
+  max-width: 100%;
 }
 
-ul.skills, ul.hobbies {
-  padding: 0;
+.card ul {
+  padding: 0 30px;
   text-align: center;
 }
 
-.skills li, .hobbies li {
-  border-radius: 6px;
+.card li {
   display: inline-block;
-  background: #ff9904;
-  color: white;
-  padding: 5px 10px;
   margin: 2px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgb(255, 153, 4);
+  color: rgb(235, 235, 235);
 }
 
-.skills li:nth-child(odd), .hobbies li:nth-child(odd) {
-  background: #0399ff;
+.card li:nth-child(odd) {
+  background: rgb(3, 153, 255);
 }
 
-footer {
+/* #footer styles */
+#footer {
   width: 100%;
-  min-height: 30px;
-  padding: 20px 0 40px 20px;
+  padding: 20px;
 }
 
-footer .copyright {
+#footer .copyright {
   top: -8px;
-  font-size: .75em;
+  font-size: 0.75em;
 }
 
-footer ul {
+#footer ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-footer ul li {
+#footer li {
   display: inline-block;
 }
 
-a.social {
+/* #social styles */
+#social a {
   display: inline-block;
-  text-indent: -9999px;
-  margin-left: 5px;
   width: 30px;
   height: 30px;
+  margin: 0 2.5px;
+  transition: all 0.5s;
   background-size: 30px 30px;
-  opacity: .4;
-  transition: all .5s;
+  opacity: 0.4;
+  text-indent: -9999px;
 }
-a.twitter {
-  background-image: url(images/twitter.svg);
-}
-a.linkedin {
-  background-image: url(images/linkedin.svg);
-}
-a.github {
-  background-image: url(images/github.svg);
-}
-a.nyan {
-  background-image: url(images/nyan.png);
-  border-radius: 50%;
-}
-a.social:hover {
+
+#social a:hover {
   opacity: 1;
 }
-.clearfix {
-  clear: both;
+
+#social .github {
+  background-image: url('images/github.svg');
 }
 
-/* Styles for larger screens */
+#social .nyan {
+  border-radius: 50%;
+  background-image: url('images/nyan.png');
+}
+
+/* desktop styles */
 @media screen and (min-width: 720px) {
-  
-  .deck {
-      display: -ms-flexbox;      /* TWEENER - IE 10 */
-      display: flex; 
-      flex-wrap: wrap;
-      max-width: 1200px;
-      -ms-flex-pack: distribute;
-      justify-content: space-around;
-      margin: 0 auto;
-  }
-
-  .card {
-      flex-basis: 0;
-      flex-grow: 1;
-  }
-
-  .nav {
+  /* #nav styles */
+  #nav {
     max-width: 1200px;
-    padding: 0 30px;
+    margin: 0 auto;
+    padding: 0 35px;
   }
 
-  main header {
+  /* #hero styles */
+  #hero {
     min-height: 470px;
+    padding: 69px 20px 20px;
   }
 
-  main {
-    padding-top: 20px;
-  }
-
-  main p {
-    line-height: 1.6em;
-  }
-
-  footer {
-    font-size: 1.3em;
+  /* .deck styles */
+  .deck {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
     max-width: 1200px;
-    margin: 40px auto;
+    margin: 30px auto;
   }
 
-}
+  /* .card styles */
+  .card {
+    padding: 20px 40px 40px;
+    border-bottom: 4px solid rgb(204, 204, 204);
+    border-radius: 6px;
+  }
 
+  /* #footer styles */
+  #footer {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.3em;
+  }
+}

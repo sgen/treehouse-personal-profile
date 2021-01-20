@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-Us">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Nyan</title>
   <meta name="description" content="Nyan Cat">
 
-  <link rel="stylesheet" href="nyan.css">
-  
-  <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="nyan.css">
+  <link rel="stylesheet" type="text/css"
+    href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900">
 </head>
 <body>
 
-  <header>
-    <nav>
+  <!-- header start -->
+  <header id="nav-bar" class="nyan">
+    <nav id="nav">
       <ul>
         <li><a href="index.html">Home</a></li>
       </ul>
     </nav>
   </header>
+  <!-- header end -->
 
-  <!-- See https://codepen.io/eusonic/pen/oktBj Thanks Cameron Spencer! -->
-  <div class="rainbow"><div class="sprite"></div></div>
-  <ul class="stars">
-    <li><i></i><li><i></i><li><i></i><li><i></i>
-    <li><i></i><li><i></i><li><i></i><li><i></i>
-    <li><i></i><li><i></i><li><i></i><li><i></i>
-  </ul>
-  <div class="cat">
-    <div class="tail"><div class="sprite"></div></div>
-    <div class="feet"><div class="sprite"></div></div>
-    <div class="poptart"></div>
-    <div class="head"></div>
-  </div>    
+  <!-- content start -->
+  <main>
+
+    <!-- See https://codepen.io/eusonic/pen/oktBj Thanks Cameron Spencer! -->
+    <!-- stars rainbow -->
+    <div class="rainbow"><div class="sprite"></div></div>
+    <!-- stars start -->
+    <ul class="stars">
+      <li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li>
+      <li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li>
+      <li><i></i></li><li><i></i></li><li><i></i></li><li><i></i></li>
+    </ul>
+    <!-- stars end -->
+    <!-- nyancat start -->
+    <div class="cat">
+      <div class="tail"><div class="sprite"></div></div>
+      <div class="feet"><div class="sprite"></div></div>
+      <div class="poptart"></div>
+      <div class="head"></div>
+    </div>
+    <!-- nyancat end -->
+  </main>
+  <!-- content end -->
 
 </body>
 </html>
